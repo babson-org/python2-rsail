@@ -23,7 +23,7 @@ fi
 echo "Configuring git..."
 git config --global pull.rebase false
 # Create Git alias for pulling from upstream with unrelated histories allowed
-git config --global alias.pullupstream "!git pull upstream main --allow-unrelated-histories --no-edit"
+git config --global alias.upstream "!git pull upstream main --allow-unrelated-histories --no-edit"
 
 
 echo "Setup complete!"

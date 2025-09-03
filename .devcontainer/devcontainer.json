@@ -30,6 +30,7 @@
         "github.copilot.enable": false,
         "github.copilot.inlineSuggest.enable": false,
         "github.copilot.editor.enableAutoCompletions": false,
+        "chat.commandCenter.enabled": false, // Hide Copilot Chat UI (top bar + bottom bar)
 
         // 🐚 Terminal setup
         "terminal.integrated.profiles.linux": {
@@ -60,5 +61,6 @@
     "PIP_DISABLE_PIP_VERSION_CHECK": "1"
   }
 }
+
 
 

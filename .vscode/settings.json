@@ -19,7 +19,7 @@
     "**/__pycache__": true,
     "**/*.pyc": true,
     "**/venv": true,
-    "**/.devcontainer": true,
+    "**/.devcontainer": false,
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,

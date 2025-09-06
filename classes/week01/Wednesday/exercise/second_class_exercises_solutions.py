@@ -158,3 +158,16 @@ for idx in range(length - shift, length - shift + length):
     shifted_list.append(myList[old_idx])
 print(shifted_list)
 
+'''
+Concepts covered, tools for your toolchest
+
+Arithmetic operators on strings (*)
+Loops (for, nested loops)
+Controlling print output (end)
+String indexing and iteration
+Conditionals
+List manipulation and modular arithmetic
+Using len() and enumerate()
+
+'''
+

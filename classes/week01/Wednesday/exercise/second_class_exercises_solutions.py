@@ -24,9 +24,21 @@ print()
 20 21 22
 
 '''
-for i in range(3):
-    for j in range(3):
-        print(str(i) + str(j), end = ' ')
+
+'''
+example of nested loops.  think of the outer loop as rows
+and the inner loop as columns.  we start with row = 0 and then for
+each column we print 0col0 0col1 0col2 and then print() for a new row
+or 00 01 02
+then row becomes 1 and we repeat the process
+10 11 12
+and again
+20 21 22
+'''
+
+for row in range(3):
+    for col in range(3):
+        print(str(row) + str(col), end = ' ')
     print()
 
 # define txt and input some text from the keyboard into it

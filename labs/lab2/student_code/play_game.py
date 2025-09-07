@@ -24,13 +24,40 @@ Imported Functions:
     - find_move(board, playerTurn): Uses minimax to find the best AI move (hard mode).
     - clear_screen(): Clears the terminal for a cleaner display.
 """
+import importlib.util
+from pathlib import Path
 
-from display_board import print_board
-from game_over import game_over
-from calc_score import calc_score
-from player_move import player_move
-from ai_move import ai_move
-from find_move import find_move, mini_max
+def import_module(name):
+    """
+    Imports a module from student_code/*.py if it exists,
+    otherwise loads default_code/*.pyc directly.
+    """
+    base_dir = Path(__file__).parent.resolve()
+    student_py = base_dir / f"{name}.py"
+    default_pyc = base_dir.parent / "default_code" / f"{name}.pyc"
+
+    if student_py.exists():
+        spec = importlib.util.spec_from_file_location(name, student_py)
+    elif default_pyc.exists():
+        spec = importlib.util.spec_from_file_location(name, default_pyc)
+    else:
+        raise ImportError(f"Module '{name}' not found in student_code or default_code.")
+
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+
+print_board = import_module("display_board").print_board
+game_over = import_module("game_over").game_over
+calc_score = import_module("calc_score").calc_score
+player_move = import_module("player_move").player_move
+ai_move = import_module("ai_move").ai_move
+find_move = import_module("find_move").find_move
+mini_max = import_module("find_move").mini_max
+clear_screen = import_module("utils").clear_screen
+
 from utils import clear_screen
 import time
 
